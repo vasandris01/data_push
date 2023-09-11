@@ -13,6 +13,25 @@
         <td><a th:href="@{/show}">Show information</a></td>
     </tr>
 </table>
-
+<form th:action="@{/regist}" method="post">
+    <label>Name: <input placeholder="Ide írjál..." type="text" id="name" name="name"></label>
+    <div>
+        <label>Gender:</label>
+        <label>Male: </label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label>Female: </label>
+        <input type="radio" id="female" name="gender" value="female">
+    </div>
+    <div>
+        <label>Languages: </label>
+        <label>english</label>
+        <input type="checkbox" id="english" name="languages" value="english">
+        <label>hungary</label>
+        <input type="checkbox" id="hungary" name="languages" value="hungary">
+        <label>spanish</label>
+        <input type="checkbox" id="spanish" name="languages" value="spanish">
+    </div>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>

@@ -14,5 +14,23 @@
     </tr>
 </table>
 
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Languages</th>
+    </tr>
+    </thead>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.gender}"></td>
+        <td>
+            <ul>
+                <li th:each="language : ${user.languages}" th:text="${language}"></li>
+            </ul>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
